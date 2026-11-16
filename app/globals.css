@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
-/* MineOps demo: solo blanco, negro y grises. */
+/* MineOps demo: menú azul índigo, contenido blanco y texto rojo oscuro. */
 :root {
   --bg: #ffffff;
-  --ink: #0a0a0a;
+  --ink: #8b1a1a;
   --muted: #6b7280;
   --faint: #9ca3af;
   --line: #e5e7eb;
   --soft: #f4f4f5;
-  --side: #0a0a0a;
-  --side-line: #262626;
-  --side-muted: #a3a3a3;
+  --side: #190076;
+  --side-line: #2f1a94;
+  --side-muted: #b9aee8;
   --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-code: ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, monospace;
 }

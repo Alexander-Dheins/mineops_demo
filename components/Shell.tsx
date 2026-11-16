@@ -72,7 +72,7 @@ function Module({ tag, title, items, onNavigate }: { tag: string; title: string;
   return (
     <div>
       <p className="flex items-center gap-2.5 px-3 py-2 text-[13.5px] font-semibold text-neutral-200">
-        <span className={`rounded px-1.5 py-px text-[10.5px] font-bold ${open ? "bg-white text-ink" : "bg-neutral-700 text-neutral-200"}`}>
+        <span className={`rounded px-1.5 py-px text-[10.5px] font-bold ${open ? "bg-white text-ink" : "bg-white/15 text-white"}`}>
           {tag}
         </span>
         <span className="flex-1">{title}</span>

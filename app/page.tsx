@@ -20,7 +20,7 @@ export default function Login() {
           <h1 className="text-[clamp(2.5rem,4vw,3.25rem)] leading-[1.02] font-extrabold tracking-[-0.02em]">
             Gestión de
             <br />
-            <span className="text-neutral-400">operaciones</span>
+            <span className="text-side-muted">operaciones</span>
             <br />
             mineras
           </h1>
