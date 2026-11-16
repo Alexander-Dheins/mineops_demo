@@ -121,7 +121,7 @@ body {
 .side-blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(60px);
+  filter: blur(clamp(60px, 7vw, 120px));
   will-change: transform;
 }
 .side-blob-a {

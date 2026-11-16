@@ -5,7 +5,13 @@ import { ArrowRight, Eye, Lock, Mail } from "lucide-react";
 export default function Login() {
   return (
     <div className="grid min-h-screen lg:grid-cols-[1.08fr_1fr]">
-      <section className="relative hidden flex-col justify-between overflow-hidden bg-side p-8 text-white lg:flex">
+      <section className="relative hidden flex-col justify-between overflow-hidden bg-side-deep p-8 text-white lg:flex">
+        {/* Mismo fondo animado que el menú */}
+        <div aria-hidden className="pointer-events-none absolute inset-0">
+          <span className="side-blob side-blob-a" />
+          <span className="side-blob side-blob-b" />
+          <span className="side-blob side-blob-c" />
+        </div>
         <div
           aria-hidden
           className="absolute inset-0 opacity-[0.07]"
