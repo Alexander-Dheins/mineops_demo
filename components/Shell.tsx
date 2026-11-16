@@ -104,11 +104,18 @@ export default function Shell({ variant, crumbs, status, children }: Props) {
       {open ? <button aria-label="Cerrar el menú" onClick={close} className="fixed inset-0 z-30 bg-black/40 lg:hidden" /> : null}
 
       <aside
-        className={`fixed inset-y-0 left-0 z-40 flex w-[254px] flex-col bg-side text-white transition-transform duration-200 lg:sticky lg:top-0 lg:h-screen lg:translate-x-0 ${
+        className={`fixed inset-y-0 left-0 z-40 flex w-[254px] flex-col overflow-hidden bg-side-deep text-white transition-transform duration-200 lg:sticky lg:top-0 lg:h-screen lg:translate-x-0 ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex h-[60px] shrink-0 items-center gap-3 border-b border-side-line px-4">
+        {/* Fondo animado: manchas azules difuminadas que se mueven sobre negro */}
+        <div aria-hidden className="side-glow pointer-events-none absolute inset-0">
+          <span className="side-blob side-blob-a" />
+          <span className="side-blob side-blob-b" />
+          <span className="side-blob side-blob-c" />
+        </div>
+
+        <div className="relative flex h-[60px] shrink-0 items-center gap-3 border-b border-side-line px-4">
           <Image src="/logo-blanco.png" alt="" width={36} height={36} className="h-9 w-9" />
           {variant === "global" ? (
             <div className="min-w-0 leading-tight">
@@ -123,7 +130,7 @@ export default function Shell({ variant, crumbs, status, children }: Props) {
           )}
         </div>
 
-        <nav className="min-h-0 flex-1 overflow-y-auto pb-4">
+        <nav className="relative min-h-0 flex-1 overflow-y-auto pb-4">
           {variant === "global" ? (
             <>
               <Group title="General">
@@ -182,7 +189,7 @@ export default function Shell({ variant, crumbs, status, children }: Props) {
           )}
         </nav>
 
-        <div className="flex shrink-0 items-center gap-3 border-t border-side-line px-4 py-3">
+        <div className="relative flex shrink-0 items-center gap-3 border-t border-side-line px-4 py-3">
           <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white text-[12px] font-bold text-ink">AD</span>
           <div className="min-w-0 flex-1 leading-tight">
             <p className="truncate text-[14px] font-semibold">Administrador Demo</p>

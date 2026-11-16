@@ -9,7 +9,8 @@
   --line: #e5e7eb;
   --soft: #f4f4f5;
   --side: #190076;
-  --side-line: #2f1a94;
+  --side-deep: #05030f;
+  --side-line: rgb(255 255 255 / 0.12);
   --side-muted: #b9aee8;
   --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-code: ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, monospace;
@@ -23,6 +24,7 @@
   --color-line: var(--line);
   --color-soft: var(--soft);
   --color-side: var(--side);
+  --color-side-deep: var(--side-deep);
   --color-side-line: var(--side-line);
   --color-side-muted: var(--side-muted);
   --font-sans: var(--font-body);
@@ -112,5 +114,60 @@ body {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--muted);
+  }
+}
+
+/* Menú: degradado animado de azul oscuro a negro, difuminado. */
+.side-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  will-change: transform;
+}
+.side-blob-a {
+  top: -12%;
+  left: -45%;
+  width: 150%;
+  height: 48%;
+  background: #190076;
+  animation: side-drift-a 14s ease-in-out infinite alternate;
+}
+.side-blob-b {
+  top: 38%;
+  left: 10%;
+  width: 130%;
+  height: 40%;
+  background: #2413a8;
+  opacity: 0.75;
+  animation: side-drift-b 18s ease-in-out infinite alternate;
+}
+.side-blob-c {
+  bottom: -14%;
+  left: -50%;
+  width: 140%;
+  height: 40%;
+  background: #190076;
+  opacity: 0.9;
+  animation: side-drift-a 22s ease-in-out infinite alternate-reverse;
+}
+@keyframes side-drift-a {
+  from {
+    transform: translate3d(-8%, -10%, 0) scale(1);
+  }
+  to {
+    transform: translate3d(28%, 55%, 0) scale(1.25);
+  }
+}
+@keyframes side-drift-b {
+  from {
+    transform: translate3d(10%, 20%, 0) scale(1.1);
+  }
+  to {
+    transform: translate3d(-45%, -70%, 0) scale(0.85);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .side-blob {
+    animation: none;
   }
 }
