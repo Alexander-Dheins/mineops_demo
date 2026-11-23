@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
-/* MineOps demo: menú azul índigo, contenido blanco y texto rojo oscuro. */
+/* MineOps demo: menú azul oscuro, contenido blanco y texto negro. */
 :root {
   --bg: #ffffff;
-  --ink: #8b1a1a;
+  --ink: #0a0a0a;
   --muted: #6b7280;
   --faint: #9ca3af;
   --line: #e5e7eb;
   --soft: #f4f4f5;
-  --side: #190076;
+  --side: #0d003d;
   --side-deep: #05030f;
   --side-line: rgb(255 255 255 / 0.12);
   --side-muted: #b9aee8;
@@ -129,7 +129,7 @@ body {
   left: -45%;
   width: 150%;
   height: 48%;
-  background: #190076;
+  background: #0d003d;
   animation: side-drift-a 14s ease-in-out infinite alternate;
 }
 .side-blob-b {
@@ -137,7 +137,7 @@ body {
   left: 10%;
   width: 130%;
   height: 40%;
-  background: #2413a8;
+  background: #140a6b;
   opacity: 0.75;
   animation: side-drift-b 18s ease-in-out infinite alternate;
 }
@@ -146,7 +146,7 @@ body {
   left: -50%;
   width: 140%;
   height: 40%;
-  background: #190076;
+  background: #0d003d;
   opacity: 0.9;
   animation: side-drift-a 22s ease-in-out infinite alternate-reverse;
 }
