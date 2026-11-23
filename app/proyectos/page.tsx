@@ -4,10 +4,10 @@ import Shell from "@/components/Shell";
 import { PROJECTS } from "@/lib/data";
 
 const STATS = [
-  { label: "Total proyectos", value: "10", hint: "En todas las unidades", icon: Landmark },
-  { label: "Abiertos", value: "10", hint: "En operación", icon: CircleCheck },
-  { label: "Unidades Mineras", value: "4", hint: "Agrupan los proyectos", icon: Building2 },
-  { label: "Módulos completos", value: "10", hint: "Proyectos activos completos", icon: Expand },
+  { label: "Total proyectos", value: "3", hint: "En todas las unidades", icon: Landmark },
+  { label: "Abiertos", value: "3", hint: "En operación", icon: CircleCheck },
+  { label: "Unidades Mineras", value: "3", hint: "Agrupan los proyectos", icon: Building2 },
+  { label: "Módulos completos", value: "3", hint: "Proyectos activos completos", icon: Expand },
 ];
 
 export default function Proyectos() {
