@@ -51,7 +51,7 @@ export default function Proyectos() {
           <span className="btn-ghost">Todos</span>
           <span className="btn">Abiertos</span>
           <span className="btn-ghost">Cerrados</span>
-          <span className="font-mono text-[11.5px] text-faint">10 proyectos</span>
+          <span className="font-mono text-[11.5px] text-faint">3 proyectos</span>
         </div>
 
         <div className="overflow-x-auto">
